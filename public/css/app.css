@@ -1,0 +1,14 @@
+.header {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+.header .navbar {
+    background-color: transparent !important;
+  }
+
+  body {
+    background-color: #222;
+    
+  }
+
+
+
