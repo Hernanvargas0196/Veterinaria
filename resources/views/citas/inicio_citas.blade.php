@@ -30,8 +30,9 @@
                             <th>ID Cita</th>
                             <th>Fecha Cita</th>
                             <th>Hora Cita</th>
-                            <th>Mascota ID</th>
                             <th>Nombre Mascota</th>
+                            <th>Tipo Mascota</th>
+                            <th>Dueño</th>
                             <th>Editar</th>
                             <th>Eliminar</th>
                         </thead>
@@ -47,8 +48,9 @@
                                     <td>{{$cita -> id}}</td>
                                     <td>{{$cita -> fecha_cita}}</td>
                                     <td>{{$cita -> hora_cita}}</td>
-                                    <td>{{$cita -> masc_cita}}</td>
-                                    <td>{{$cita -> mascota ->nom_masc}}</td>
+                                    <td>{{$cita -> mascota->nom_masc}}</td>
+                                    <td>{{$cita -> mascota->tipo_masc}}</td>
+                                    <td>{{$cita -> cliente->nom_ape_cli}}</td>
                                     <td>
                                         <form action="{{ route("citas.edit", $cita->id) }}" method="GET">
                                             @csrf

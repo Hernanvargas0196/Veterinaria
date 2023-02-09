@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Citas;
 use App\Models\Mascotas;
+use App\Models\Clientes;
 use Illuminate\Http\Request;
 
 class CitasController extends Controller
@@ -33,7 +34,8 @@ class CitasController extends Controller
     {
         //
         $mascotas = Mascotas::all();
-        return view('citas/add_cita', compact('mascotas'));
+        $clientes = Clientes::all();
+        return view('citas/add_cita', compact('mascotas', 'clientes'));
     }
 
     
@@ -45,6 +47,7 @@ class CitasController extends Controller
         $citas->fecha_cita = $request->post('fecha_cita');
         $citas->hora_cita = $request->post('hora_cita');
         $citas->masc_cita = $request->post('masc_cita');
+        $citas->cli_cita = $request->post('cli_cita');
         $citas->save();
 
         return redirect()->route("citas.index")->with("success", "Cita agregada con exito!");
@@ -66,7 +69,8 @@ class CitasController extends Controller
         //
         $cita = Citas::find($id);
         $mascotas = Mascotas::all();
-        return view("citas/update_cita", compact('cita', 'mascotas'));
+        $clientes = Clientes::all();
+        return view("citas/update_cita", compact('cita', 'mascotas', 'clientes'));
     }
 
     

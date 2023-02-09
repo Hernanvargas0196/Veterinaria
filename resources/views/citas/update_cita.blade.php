@@ -21,7 +21,11 @@
           <label for="">Hora_cita</label>
           <input type="time" name="hora_cita" class="form-control" required value="{{$cita->hora_cita}}">
           <label for="">Mascota</label>
-          <input type="number" name="masc_cita" class="form-control" required value="{{$cita->masc_cita}}">
+          <select name="masc_cita" id="inputMasc_cita" class="form-control">
+            @foreach ($mascotas as $mascota)
+              <option value="{{$mascota['id']}}">{{$mascota['nom_masc']}}</option>
+            @endforeach
+          </select>
             <br>
             <button class="btn btn-info">
                 Actualizar

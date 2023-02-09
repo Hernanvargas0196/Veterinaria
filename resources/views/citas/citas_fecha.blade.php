@@ -42,7 +42,7 @@
                                   <td>{{$cita -> id}}</td>
                                   <td>{{$cita -> fecha_cita}}</td>
                                   <td>{{$cita -> hora_cita}}</td>
-                                  <td>{{$cita -> masc_cita}}</td>
+                                  <td>{{$cita -> mascota->nom_masc}}</td>
                               </tr>
                           @endforeach
                       </tbody>

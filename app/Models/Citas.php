@@ -14,4 +14,13 @@ class Citas extends Model
     {
         return $this->belongsTo(Mascotas::class, 'masc_cita');
     }
+
+    public function cliente()
+    {
+        return $this->belongsTo(Clientes::class, 'cli_cita');
+    }
+
+
+
+    
 }

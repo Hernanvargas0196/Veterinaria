@@ -55,7 +55,7 @@ class MascotasController extends Controller
     {
         //
         $mascota = Mascotas::find($id);
-        $clientes = Clientes::all();
+        $clientes = Clientes::all(); 
         return view("mascotas/update_masc", compact('mascota', 'clientes'));
     }
 

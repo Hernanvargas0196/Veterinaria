@@ -20,9 +20,11 @@ return new class extends Migration
             $table->date('fecha_cita');
             $table->time('hora_cita');
             $table->integer('masc_cita');
+            $table->integer('cli_cita');
             $table->timestamps();
 
             $table->foreign('masc_cita')->references('id')->on('mascotas')->onDelete("cascade");
+            $table->foreign('cli_cita')->references('id')->on('clientes')->onDelete("cascade");
         });
     }
 

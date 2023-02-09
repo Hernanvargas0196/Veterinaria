@@ -25,6 +25,12 @@
                 <option value="{{$mascota['id']}}">{{$mascota['nom_masc']}}</option>
               @endforeach
             </select>
+            <label for="">Cliente</label>
+            <select name="cli_cita" id="inputCli_cita" class="form-control">
+              @foreach ($clientes as $cliente)
+                <option value="{{$cliente['id']}}">{{$cliente['nom_ape_cli']}}</option>
+              @endforeach
+            </select>
             <br>
             <a href="{{route("citas.index")}}"><i class="fa-solid fa-arrow-left-long"></i></a>
             <hr>

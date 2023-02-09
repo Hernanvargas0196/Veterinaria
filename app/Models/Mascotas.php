@@ -9,6 +9,10 @@ class Mascotas extends Model
 {
     use HasFactory;
     protected $table = "mascotas";
+    public function cliente()
+    {
+        return $this->belongsTo(Clientes::class, 'cli_masc');
+    }
     
 }
 

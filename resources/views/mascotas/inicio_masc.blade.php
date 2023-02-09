@@ -29,6 +29,7 @@
                         <thead>
                             <th>ID Mascota</th>
                             <th>Nombre</th>
+                            <th>Dueño</th>
                             <th>Tipo</th>
                             <th>Editar</th>
                             <th>Eliminar</th>
@@ -38,6 +39,7 @@
                                 <tr>
                                     <td>{{$mascota -> id}}</td>
                                     <td>{{$mascota -> nom_masc}}</td>
+                                    <td>{{$mascota -> cliente->nom_ape_cli}}</td>
                                     <td>{{$mascota -> tipo_masc}}</td>n
                                     <td>
                                         <form action="{{ route("mascotas.edit", $mascota->id) }}" method="GET">
