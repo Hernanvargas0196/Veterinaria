@@ -11,9 +11,9 @@ class CitasController extends Controller
     
     public function index(Request $request)
     {
-        //
         $datos = Citas::all();
-        return view('citas/inicio_citas', compact('datos'));
+        $mascotas =Mascotas::all();  
+        return view('citas/inicio_citas', compact('datos', 'mascotas'));
     }
 
     public function citas_fecha(Request $request)

@@ -6,6 +6,7 @@ use App\Http\Controllers\MascotasController;
 use App\Http\Controllers\CitasController;
 
 //Clientes
+Route::get('', [ClientesController::class, 'index'])->name('clientes.index');
 Route::get('/clientes', [ClientesController::class, 'index'])->name('clientes.index');
 Route::get('/create/cliente', [ClientesController::class, 'create'])->name('clientes.create');
 Route::post('/store/cliente', [ClientesController::class, 'store'])->name('clientes.store');

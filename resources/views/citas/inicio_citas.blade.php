@@ -30,19 +30,25 @@
                             <th>ID Cita</th>
                             <th>Fecha Cita</th>
                             <th>Hora Cita</th>
-                            <th>Mascota</th>
+                            <th>Mascota ID</th>
+                            <th>Nombre Mascota</th>
                             <th>Editar</th>
                             <th>Eliminar</th>
                         </thead>
                         <tbody>
-                            @foreach ($datos as $cita)
-                                
+                            @foreach ($mascotas as $mascota)
                             
+                            
+                            @endforeach
+                            @foreach ($datos as $cita)
+                            
+                                
                                 <tr>
                                     <td>{{$cita -> id}}</td>
                                     <td>{{$cita -> fecha_cita}}</td>
                                     <td>{{$cita -> hora_cita}}</td>
                                     <td>{{$cita -> masc_cita}}</td>
+                                    <td>{{$cita -> mascota ->nom_masc}}</td>
                                     <td>
                                         <form action="{{ route("citas.edit", $cita->id) }}" method="GET">
                                             @csrf
